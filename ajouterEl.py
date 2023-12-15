@@ -6,15 +6,17 @@ import pymysql
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-from departement2 import *
+from tkinter import *
 from tkinter import filedialog
 
 import sqlite3
 import pymysql
+
+
 class ajouterEl:
     def __init__(self):
         pass
-    def ajoue (self):
+    def ajouet(self):
         global essaie
         essaie = 0
 
@@ -156,7 +158,7 @@ class ajouterEl:
             options.append(f"{nom_classe} - {id_classe}")
          # Variable pour la sélection  
         selected_class = tk.StringVar() 
-        class_list = tk.OptionMenu(frame, selected_class, *options)
+        class_list = tk.OptionMenu(frame, selected_class, options)
         class_list.pack()
 
 

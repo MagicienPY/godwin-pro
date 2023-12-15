@@ -1534,6 +1534,7 @@ ORDER BY
         Vue = Matier()
         menub = Menu(acceuil)
 
+        ajj = ajouterEl()
         
         def b_i ():
             monb = bul_indiv()
@@ -1548,7 +1549,7 @@ ORDER BY
 
         filemenu = Menu(menub,tearoff=0)
         menub.add_cascade(label="fichier", menu=filemenu)
-        filemenu.add_command(label="Ajouter Etudiant",command=lambda: aje)
+        filemenu.add_command(label="Ajouter Etudiant",command=lambda: ajj.ajouet())
         filemenu.add_command(label="Ajouter note",command=lambda: bj.ajoue())
         filemenu.add_command(label="classe",command=open_classes)
         filemenu.add_command(label="enseignant",command=lambda: indispo)
