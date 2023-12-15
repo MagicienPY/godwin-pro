@@ -1,0 +1,9 @@
+aspose-pdf
+mysql-connector-python
+Pillow
+matplotlib
+pdfminer.six
+pymysql
+python-docx
+reportlab
+tkinter

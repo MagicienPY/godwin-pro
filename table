@@ -1,0 +1,62 @@
+si tu veux ses information voici ma bd   CREATE TABLE `classe` (
+  `id_classe` int(11) NOT NULL,
+  `nom_classe` varchar(255) NOT NULL,
+  `niveau_classe` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  CREATE TABLE `cote` (
+  `id_cote` int(11) NOT NULL,
+  `cote_cc` float NOT NULL,
+  `cote_sn` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `cours` (
+  `id_cours` int(11) NOT NULL,
+  `nom_cours` varchar(255) NOT NULL,
+  `code_cours` varchar(255) NOT NULL,
+  `nb_credits` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+        CREATE TABLE `enseignant` (
+  `id_enseignant` int(11) NOT NULL,
+  `nom_enseignant` varchar(255) NOT NULL,
+  `prenom_enseignant` varchar(255) NOT NULL,
+  `tel_enseignant` varchar(255) NOT NULL,
+  `email_enseignant` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `etudiant` (
+  `id_etudiant` int(11) NOT NULL,
+  `mat_etudiant` varchar(255) NOT NULL,
+  `cin_etudiant` varchar(255) NOT NULL,
+  `daten_etu` date NOT NULL,
+  `lieun_etu` varchar(255) NOT NULL,
+  `adress_etu` varchar(255) NOT NULL,
+  `tel_etu` varchar(255) NOT NULL,
+  `nom_etu` varchar(255) NOT NULL,
+  `prenom_etu` varchar(255) NOT NULL,
+  `id_classe` int(11) NOT NULL,
+  `tof` varchar(3000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;                                                 CREATE TABLE `matiere` (
+  `id_matiere` int(11) NOT NULL,
+  `nom_matiere` varchar(255) NOT NULL,
+  `id_module` int(11) NOT NULL,
+  `coef_matiere` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `module` (
+  `id_module` int(11) NOT NULL,
+  `nom_module` varchar(255) NOT NULL,
+  `coef_module` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `note` (
+  `id_note` int(11) NOT NULL,
+  `valeur_note` float NOT NULL,
+  `type_note` varchar(255) NOT NULL,
+  `annee_scolaire` varchar(255) NOT NULL,
+  `semestre` varchar(255) NOT NULL,
+  `poids_note` int(11) NOT NULL,
+  `id_etudiant` int(11) NOT NULL,
+  `id_matiere` int(11) NOT NULL,
+  `id_enseignant` int(11) NOT NULL,
+  `note_cc` float NOT NULL,
+  `note_sn` float NOT NULL,
+  `id_cote` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+ 
